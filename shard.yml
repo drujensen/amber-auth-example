@@ -1,0 +1,37 @@
+name: auth
+version: 0.1.0
+
+authors:
+  - Amber <contact@ambercr.io>
+
+crystal: 0.23.0
+
+license: MIT
+
+dependencies:
+  amber:
+    github: amber-crystal/amber 
+    version: ~> 0.1.4
+
+  quartz-mailer:
+    github: amber-crystal/quartz-mailer
+    branch: master
+
+  granite_orm:
+    github: amber-crystal/granite-orm
+    version: ~> 0.6.0
+
+  mysql:
+    github: crystal-lang/crystal-mysql
+
+#  mysql:
+#    github: crystal-lang/crystal-mysql
+#  pg:
+#    github: will/crystal-pg
+#  sqlite3:
+#    github: crystal-lang/crystal-sqlite3
+
+development_dependencies:
+  amber-spec:
+    github: amber-crystal/amber-spec
+    branch: master

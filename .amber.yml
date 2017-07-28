@@ -1,0 +1,3 @@
+type: app
+database: mysql
+language: slang

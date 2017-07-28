@@ -1,0 +1,2 @@
+mysql:
+  database: mysql://root@localhost:3306/auth_development
