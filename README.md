@@ -216,6 +216,8 @@ Amber::Server.instance.config do |app|
   end
 ...
 ```
+We enable the `CSRF` pipe and add the `Authenticate` pipe.
+
 Don't forget to require the `..src/middleware/*`.
 
 Finally, let's update the `views/layouts/_nav.slang` so it hides the `users` navigation and shows a `login`, `logout`:
