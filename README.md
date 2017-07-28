@@ -93,12 +93,22 @@ We remove setting the `encrypted_password` directly and use the new `password=` 
 
 In the `views/users/_form.slang`:
 ```slang
+...
+form action="#{ action }" method="post"
+  == csrf_tag
+  - if user.id
+    input type="hidden" name="_method" value="patch"
+  div.form-group
+    input.form-control type="text" name="email" placeholder="Email" value="#{ user.email }"
+  div.form-group
     input.form-control type="password" name="password" placeholder="password"
+  button.btn.btn-primary.btn-xs type="submit" Submit
+  a.btn.btn-default.btn-xs href="/users" back
 ```
 
-We replace the `encrypted_password` input with the `password` input and change the type to `password`.
+We add the `== csrf_tag` and replace the `encrypted_password` input with the `password` input.  We also change the type of input to `password`.
 
-Ok. Now lets move on to the SessionController and create the login screen.
+Ok. Now lets move on to the `SessionController` and create the login screen.
 
 In the `controllers/session_controller.cr`:
 ```crystal
@@ -129,11 +139,11 @@ class SessionController < ApplicationController
 end
 ```
 
-Now we need a login page. Remove the `views/session/create.slang` and `views/session/delete.slang`
-In the `views/session/new.slang`:
+Now we need a login page. Remove the `views/session/create.slang` and `views/session/delete.slang` and update the
+`views/session/new.slang`:
 ```slang
 form action="/session" method="post"
-  == csrf_tag(context)
+  == csrf_tag
   div.form-group
     input.form-control type="email" name="email" placeholder="Email"
   div.form-group
@@ -221,7 +231,7 @@ a class="nav-item #{active}" href="/" Home
   a class="nav-item #{active} pull-right" href="/login" Login
 ```
 
-## run the app!
+## Run
 ```bash
 amber w
 ```
