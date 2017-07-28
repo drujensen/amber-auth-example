@@ -1,4 +1,4 @@
-# auth
+# Amber Auth Example
 
 This is an example of how to handle authentication with Amber.
 
