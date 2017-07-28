@@ -2,7 +2,7 @@ version: 1.0
 shards:
   amber:
     github: amber-crystal/amber
-    version: 0.1.4
+    commit: 8a93d48f167700485d10d5ade1ab9b8299622cf7
 
   amber-spec:
     github: amber-crystal/amber-spec
@@ -30,7 +30,7 @@ shards:
 
   quartz-mailer:
     github: amber-crystal/quartz-mailer
-    commit: 203c6ac78e670a6d86eb33cb4ee4220b5fa5eb4d
+    version: 0.1.0
 
   radix:
     github: luislavena/radix

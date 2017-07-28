@@ -1,4 +1,5 @@
 require "amber"
+require "./middleware/*"
 require "../config/*"
 require "./models/**"
 require "./mailers/**"

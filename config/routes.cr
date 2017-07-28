@@ -1,5 +1,3 @@
-require "../src/middleware/*"
-
 Amber::Server.instance.config do |app|
   pipeline :web do
     # Plug is the method to use connect a pipe (middleware)
