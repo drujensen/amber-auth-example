@@ -232,6 +232,23 @@ a class="nav-item #{active}" href="/" Home
   - active = context.request.path == "/login" ? "active" : ""
   a class="nav-item #{active} pull-right" href="/login" Login
 ```
+## Seeds
+
+Create a new file `db/seeds.cr`:
+```crystal
+require "amber"
+require "../src/models/*"
+
+user = User.new
+user.email = "admin@example.com"
+user.password = "password"
+user.save
+```
+
+Seed the database by running:
+```bash
+crystal db/seeds.cr
+```
 
 ## Run
 ```bash
