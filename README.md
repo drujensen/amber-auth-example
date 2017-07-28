@@ -15,7 +15,7 @@ Next, we scaffold a new User model:
 amber generate scaffold User email:string encrypted_password:string
 ```
 
-Finally, we will need a sessions controller to handle login and logout.
+and we will need a sessions controller to handle login and logout:
 ```bash
 amber generate controller Session new create delete
 ```
